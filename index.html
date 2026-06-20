@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Zen Journey | Choose Your Path</title>
+    <!-- Google Fonts for modern typography and elegant Kanji -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Serif+JP:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="ambient-background"></div>
+
+    <main class="container fade-in" id="home-screen">
+        <header class="header">
+            <h1>Begin Your Journey</h1>
+            <p>The blade is forged in fire. The mind is forged in stillness.</p>
+        </header>
+
+        <div style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">
+            <button class="profound-btn" id="btn-kenzen" style="font-size: 1.5rem; padding: 1.5rem 4rem; letter-spacing: 2px;">Start Your Journey</button>
+        </div>
+
+        <!-- Quotes Section -->
+        <section class="quotes-section">
+            <p id="quote-text" class="quote-text">"Quiet the mind, and the soul will speak."</p>
+        </section>
+    </main>
+
+    <!-- Transition Screen -->
+    <section id="transition-screen" class="fullscreen-overlay hidden">
+        <div class="transition-content">
+            <h1 id="transition-kanji" class="kanji-large"></h1>
+            <p id="transition-translation" class="translation-text"></p>
+        </div>
+    </section>
+
+    <!-- Kenzen Ichi Goals Screen -->
+    <main class="container hidden" id="kenzen-goals-screen">
+        <header class="header fade-in">
+            <div class="subtitle">剣禅一如</div>
+            <h1>What are your goals?</h1>
+            <p>Select all that apply to forge your path.</p>
+        </header>
+
+        <div class="goals-grid fade-in" style="animation-delay: 0.3s;">
+            <button class="goal-card" data-goal="productivity">
+                <span>Increase Productivity</span>
+            </button>
+            <button class="goal-card" data-goal="career">
+                <span>Develop Your Career</span>
+            </button>
+            <button class="goal-card" data-goal="habits">
+                <span>Build Better Habits</span>
+            </button>
+            <button class="goal-card" data-goal="stronger">
+                <span>Become Stronger</span>
+            </button>
+            <button class="goal-card" data-goal="smarter">
+                <span>Become Smarter</span>
+            </button>
+        </div>
+
+        <button id="btn-continue-goals" class="primary-btn fade-in" style="animation-delay: 0.6s;" disabled>Continue</button>
+    </main>
+
+    <!-- Start Journey Screen -->
+    <section id="start-journey-screen" class="container hidden" style="justify-content: center; min-height: 100vh; margin: 0;">
+        <header class="header fade-in">
+            <div class="subtitle" style="font-size: 1.5rem; margin-bottom: 3rem;">Your path is forged.</div>
+            <button id="btn-start-journey" class="profound-btn" style="border-color: var(--accent-color);">Start Your Journey</button>
+        </header>
+    </section>
+
+    <!-- Loading Screen (Bushido Flow) -->
+    <section id="loading-screen" class="fullscreen-overlay hidden">
+        <div class="loading-content">
+            <h2 id="loading-text" class="loading-text">Going through samurai texts...</h2>
+            
+            <!-- Flowing Bushido Kanji Container -->
+            <div class="bushido-stream">
+                <div class="bushido-kanji">義 勇 仁 礼 誠 名誉 忠義 • 義 勇 仁 礼 誠 名誉 忠義</div>
+                <div class="bushido-kanji">義 勇 仁 礼 誠 名誉 忠義 • 義 勇 仁 礼 誠 名誉 忠義</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 1 Screen -->
+    <main class="container hidden" id="chapter-one-screen">
+        <header class="chapter-header fade-in">
+            <div class="chapter-number">Chapter One</div>
+            <h1 class="chapter-kanji">一期一会</h1>
+            <div class="chapter-romaji">Ichi Go Ichi E</div>
+            <p class="chapter-translation">"One time, one meeting."</p>
+        </header>
+
+        <div class="chapter-content fade-in" style="animation-delay: 0.5s;">
+            <p class="story-text">
+                <span class="drop-cap">T</span>he phrase <strong>ichi-go ichi-e</strong> (一期一会) translates literally as "one time, one meeting." Its roots lie in the Japanese tea ceremony, a practice of deep presence and mindfulness.
+            </p>
+            
+            <div class="story-image-container">
+                <img src="assets/samurai_meditation.png" alt="Samurai in meditation" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Swordsmanship schools (ryū) weren't just teaching technique — they were teaching a philosophy of how to exist in the face of death. Ichi-go ichi-e became one of the most important mental frameworks they borrowed.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/samurai_duel.png" alt="Samurai duel tension" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                The logic was stark and functional. A swordsman who treated each duel as possibly not his last would hold something back — a sliver of hesitation, an unconscious hedge against the future. And in a sword fight, hesitation is death. The concept demanded that you enter every encounter as if it were your only one, giving everything, holding nothing in reserve.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/samurai_birds.png" alt="Samurai looking at birds" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Ichi-go ichi-e does not require a quiet dojo or a degree in philosophy; it is a mental reframe applicable to any waking moment. Embracing this concept is the very first step toward entering Zen, and the necessary foundation to remain within it.
+            </p>
+
+            <p class="story-text">
+                The greatest swordsmen in history, such as Yagyū Munenori and Miyamoto Musashi, wrote extensively about a profound paradox: the more completely you accept death, the harder you are to kill. Musashi’s <em>Book of Five Rings</em> is saturated with this logic—you cannot allow your mind to dwell on surviving the strike; you must only perceive and respond to the exact, unfolding instant.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/dancing_monk.png" alt="Dancing monk with sword" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Every encounter in life is entirely unrepeatable. The conversation, the person, the idea crackling between you right now—this exact configuration of reality dies the moment it passes. That isn't philosophy. That is pressure.
+            </p>
+
+            <p class="story-text">
+                If this moment is truly happening only once, you cannot afford to be half-here. Scrolling mid-conversation, letting notifications pull your eyes away, or keeping your mind on the next task means you have already missed the only reality that actually exists.
+            </p>
+
+            <p class="story-text">
+                And you are not ignoring your past to do this. Every experience, every person you have ever known—it is all already within you, shaping how you receive this exact moment. You do not need to actively reach back for it; it arrives through you, effortlessly and automatically.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/peaceful_passing.png" alt="Peaceful ceremony" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Ultimately, ichi-go ichi-e is not simply a warning against the distraction of modern screens.
+            </p>
+
+            <p class="story-text" style="font-weight: 400; font-style: italic; text-align: center; font-size: 1.4rem; color: var(--accent-color);">
+                "Be here so completely that when this moment dies—this conversation, this person, this unrepeatable instant—absolutely nothing of it was wasted."
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-chapter-1" class="profound-btn">This is the only time this will ever exist.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chapter Two Screen: Mushin -->
+    <main class="container hidden" id="chapter-two-screen">
+        <header class="header fade-in">
+            <div class="subtitle">Chapter Two</div>
+            <h1>Mushin <span style="font-weight: 200; font-family: var(--font-kanji);">無心</span></h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text">
+                Mushin — "no mind" — is one of the most profound concepts in Japanese philosophy. Imagine your mind as water. Normally, when a threat or challenge appears, the mind grabs onto it, analyzes it, and worries about it. This grabbing distorts your perception.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/mushin_water_slice.png" alt="Samurai slicing water" class="story-image" />
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin: 3rem 0 1.5rem 0; font-weight: 300; text-align: center;">The Old Cat</h3>
+            
+            <p class="story-text">
+                A master swordsman found his home plagued by a rat of unusual size and ferocity. His swiftest, most aggressive hunting cats were easily defeated. Humiliated, the swordsman drew his wooden practice sword to strike it down himself—only for the rat to leap, bite his face, and vanish into the shadows. In desperation, he summoned a legendary old cat from a neighboring village.
+            </p>
+
+            <p class="story-text">
+                When she arrived, she appeared ancient, slow, and half-asleep. Yet, the moment she gently ambled into the room, the terrifying rat froze completely. Without a shred of drama, effort, or sudden movement, she simply caught it and walked out.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/samurai_cat.png" alt="Samurai Cat and the Giant Rat" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                That night, the defeated younger cats gathered around her, begging to know her secret. "I used no technique," she murmured. "I simply walked into the room." When they pressed her further—asking about her manipulation of <em>ki</em>, her soft power, her hidden strategies—she remained quiet for a long time. Finally, she answered: <br><br><em>"The moment you think about how to catch a rat, the rat already knows."</em>
+            </p>
+
+            <p class="story-text">
+                The rat that defeated everyone was unbeatable because pure desperation had emptied its mind. It had forgotten fear and survival. The old cat defeated it the same way—except she didn't need desperation. Decades of training had quietly burned away everything that wasn't pure presence.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/mushin_fountain.png" alt="Calm Japanese bamboo fountain" class="story-image" />
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin: 4rem 0 2rem 0; font-weight: 300; text-align: center; color: var(--accent-color);">Cultivating No-Mind</h3>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">1. Repetition until the body knows:</strong> Practice until the skill moves below thought. Pattern recognition shouldn't feel like recalling; it should feel like seeing.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">2. Single-task completely:</strong> One thing at a time. This trains the mind to stop splitting itself.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">3. Notice the commentator:</strong> When inner commentary starts, observe it like weather. It loses power the moment you stop treating it as truth.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">4. Breathe before pressure:</strong> One slow exhale before a hard moment buys one second of spaciousness. One second is enough.</li>
+                <li style="margin-bottom: 2.5rem;"><strong style="color: var(--text-primary);">5. Stop performing:</strong> Care more about the task than your performance of the task. Mushin collapses the moment you start watching yourself do it.</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-chapter-2" class="profound-btn">Stop performing. Start doing.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chapter Three Screen: Zanshin -->
+    <main class="container hidden" id="chapter-three-screen">
+        <header class="header fade-in">
+            <div class="subtitle">Chapter Three</div>
+            <h1>Zanshin <span style="font-weight: 200; font-family: var(--font-kanji);">残心</span></h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text">
+                If <em>mushin</em> is the state of no clinging during action, <strong>zanshin</strong> is what comes after. It translates literally as "remaining mind" or "lingering awareness." It is the awareness that doesn't switch off just because the action is complete.
+            </p>
+
+            <h3 style="font-size: 1.8rem; margin: 3rem 0 1.5rem 0; font-weight: 300; text-align: center;">The Archer's Release</h3>
+            
+            <p class="story-text">
+                A master archer releases an arrow and holds his posture—bow still raised, body still, gaze tracking the target—until the arrow hits. He doesn't need to do this; the arrow is already gone. But the stillness after the release is proof that his mind was fully present throughout.
+            </p>
+
+            <p class="story-text">
+                If he collapses the moment he lets go, his attention was already leaving before the shot was finished. The posture after the release reveals the quality of the mind before it.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/zanshin_archer.png" alt="Ancient archer aiming" class="story-image" />
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin: 4rem 0 2rem 0; font-weight: 300; text-align: center;">The Spectrum of Mind</h3>
+
+            <div style="background: rgba(255,255,255,0.02); padding: 2rem; border-radius: 12px; border: 1px solid var(--glass-border); margin-bottom: 3rem;">
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-secondary);"><strong style="color: var(--accent-color);">Mushin:</strong> No attachment <em>during</em> action — pure flow.</p>
+                <p style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-secondary);"><strong style="color: var(--accent-color);">Zanshin:</strong> Full awareness <em>after</em> action — presence that lingers.</p>
+                <p style="font-size: 1.1rem; color: var(--text-secondary);"><strong style="color: var(--accent-color);">Heijōshin:</strong> The calm, unshakeable mind underneath both, all the time.</p>
+            </div>
+            
+            <p class="story-text">
+                They are different expressions of the same trained stillness. Most people mentally check out the moment an action ends—they relax, look away, move on. Zanshin says: <em>Don't. Stay present.</em> The action is complete, but your awareness continues until the situation is truly resolved.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/zanshin_samurai_reflection.png" alt="Samurai reflecting in sword" class="story-image" />
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin: 4rem 0 2rem 0; font-weight: 300; text-align: center; color: var(--accent-color);">Building Zanshin in Daily Life</h3>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">After a difficult conversation:</strong> Zanshin is continuing to read the room afterward, noticing if something was left unresolved.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">After submitting work:</strong> Zanshin is the brief pause to actually check what you've done, not just exhaling and closing the tab.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">After winning an argument:</strong> Zanshin is staying aware of the relationship, not just savoring the win.</li>
+            </ul>
+            
+            <p class="story-text" style="margin-top: 2rem;">
+                It's the discipline of not mentally leaving before the situation has ended. Most mistakes happen in that gap—the moment after you think you're done, but before you actually are.
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/zanshin_monk_scorpion.png" alt="Monk and scorpion" class="story-image" />
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-chapter-3" class="profound-btn">Remain Present.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chapter Four Screen: Fudoshin -->
+    <main class="container hidden" id="chapter-four-screen">
+        <header class="header fade-in">
+            <div class="subtitle">Chapter Four</div>
+            <h1>Fudoshin <span style="font-weight: 200; font-family: var(--font-kanji);">不動心</span></h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text">
+                不動心 — immovable mind. Two ideas fused into one: the mind that cannot be shaken, and the mind that chooses not to be shaken. Those are different things. A rock cannot be shaken. A trained mind <em>chooses</em> stillness while fully feeling the storm around it.
+            </p>
+
+            <p class="story-text">
+                It's not stoicism exactly, not detachment exactly, not discipline exactly — it's closer to saying: <em>nothing that happens outside me gets to decide what happens inside me.</em>
+            </p>
+
+            <h3 style="font-size: 1.8rem; margin: 3rem 0 1.5rem 0; font-weight: 300; text-align: center;">The Swordsman and the Monk</h3>
+            
+            <p class="story-text">
+                A young swordsman had trained for twelve years in the mountains. He was flawless—fast, precise, powerful. One evening, an unarmed, old wandering monk arrived at the dojo. The master asked the young swordsman to demonstrate his skill. He performed a breathtaking sequence.
+            </p>
+
+            <p class="story-text">
+                When it was over, the monk watched quietly and said: <em>"Good technique. Weak mind."</em>
+            </p>
+
+            <p class="story-text">
+                The swordsman felt heat rise in his chest. <em>"You know nothing of swordsmanship. You're a monk."</em>
+                <br>The monk nodded slowly. <em>"And yet I moved you without touching you."</em>
+            </p>
+
+            <div class="story-image-container">
+                <img src="assets/fudoshin_monk_duel.png" alt="Swordsman facing a monk in a dojo" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                The swordsman stood there. He had no answer. The monk had said six words—and the swordsman had abandoned twelve years of training in three seconds. His face had changed. His breathing had changed. His hand had moved toward his sword. All from words.
+            </p>
+
+            <h3 style="font-size: 1.8rem; margin: 4rem 0 2rem 0; font-weight: 300; text-align: center;">The Five Forces</h3>
+
+            <p class="story-text">
+                These five constantly push against the immovable mind. Ancient warriors identified them not as weaknesses to be ashamed of, but as forces to be understood. You cannot defend against something you haven't named.
+            </p>
+
+            <div class="five-forces-chart" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                <!-- Force 1 -->
+                <div class="force-card" style="position: relative; padding: 2rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; overflow: hidden;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; pointer-events: none;">
+                        <svg width="200" height="200" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" fill="none" stroke-dasharray="10 4"/></svg>
+                    </div>
+                    <h4 style="font-family: var(--font-kanji); font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">恐</h4>
+                    <h5 style="font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px;">Fear</h5>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">The loudest one. Fear of failure or loss narrows your thinking and makes you react before you've thought.</p>
+                </div>
+                
+                <!-- Force 2 -->
+                <div class="force-card" style="position: relative; padding: 2rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; overflow: hidden;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; pointer-events: none;">
+                        <svg width="200" height="200" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" fill="none" stroke-dasharray="10 4"/></svg>
+                    </div>
+                    <h4 style="font-family: var(--font-kanji); font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">怒</h4>
+                    <h5 style="font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px;">Anger</h5>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Fast and blinding. Anger makes you predictable and hands your opponent a weapon.</p>
+                </div>
+
+                <!-- Force 3 -->
+                <div class="force-card" style="position: relative; padding: 2rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; overflow: hidden;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; pointer-events: none;">
+                        <svg width="200" height="200" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" fill="none" stroke-dasharray="10 4"/></svg>
+                    </div>
+                    <h4 style="font-family: var(--font-kanji); font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">慢</h4>
+                    <h5 style="font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px;">Ego</h5>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">The slow poison. Ego defends your image at the cost of your judgment.</p>
+                </div>
+
+                <!-- Force 4 -->
+                <div class="force-card" style="position: relative; padding: 2rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; overflow: hidden;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; pointer-events: none;">
+                        <svg width="200" height="200" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" fill="none" stroke-dasharray="10 4"/></svg>
+                    </div>
+                    <h4 style="font-family: var(--font-kanji); font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">乱</h4>
+                    <h5 style="font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px;">Chaos</h5>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Everything outside your control. Fudoshin stops you from being reorganized by chaos.</p>
+                </div>
+
+                <!-- Force 5 -->
+                <div class="force-card" style="position: relative; padding: 2rem; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); text-align: center; overflow: hidden;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.05; pointer-events: none;">
+                        <svg width="200" height="200" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="2" fill="none" stroke-dasharray="10 4"/></svg>
+                    </div>
+                    <h4 style="font-family: var(--font-kanji); font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-color);">欲</h4>
+                    <h5 style="font-size: 1.2rem; margin-bottom: 1rem; letter-spacing: 2px;">Desire</h5>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">Wanting a specific outcome too badly introduces hesitation and distortion.</p>
+                </div>
+            </div>
+
+            <div class="story-image-container">
+                <img src="assets/fudoshin_tree_storm.png" alt="Pine tree in a storm" class="story-image" />
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin: 4rem 0 2rem 0; font-weight: 300; text-align: center; color: var(--accent-color);">Applying Fudoshin Now</h3>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Sit with discomfort deliberately:</strong> Tell your nervous system: <em>this is survivable. I do not need to flee.</em></li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Pre-confront your worst case:</strong> Walk through it fully. Once you've genuinely confronted it, the fear loses its power.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Create a gap between stimulus and response:</strong> Someone insults you—extend the pause. You are choosing what comes next instead of letting the stimulus choose for you.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Stop identifying with your reactions:</strong> You are not your anger—you are the one who notices it.</li>
+            </ul>
+
+            <div class="story-image-container" style="margin-top: 3rem;">
+                <img src="assets/fudoshin_waterfall_meditation.png" alt="Meditating under waterfall" class="story-image" />
+            </div>
+            
+            <p class="story-text" style="margin-top: 3rem;">
+                Fudoshin is the practice of saying no. Not loudly. Not dramatically. Just — no. <em>You do not move me.</em> The lake still gets stones thrown into it. It always will. The practice is just making the lake deeper.
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-chapter-4" class="profound-btn">Make the lake deeper.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido Introduction Screen -->
+    <main class="container hidden" id="bushido-intro-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Warrior's Code</div>
+            <h1>Bushido</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "You cannot explore a forest without first reaching its edge."
+            </p>
+
+            <h2 class="section-title" style="margin-top: 3rem;">Origins of Bushido</h2>
+            <p class="story-text">
+                Bushido didn't just appear overnight; it evolved over centuries by blending elements from three major philosophical and religious traditions:
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Buddhism:</strong> Gave the samurai a detachment from fear, pain, and death. It allowed them to face mortality calmly on the battlefield, viewing death as a natural transition rather than an end.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Shintoism:</strong> Embedded a deep loyalty to the Emperor, ancestral worship, and a profound reverence for the homeland. It gave the samurai a powerful sense of national pride and divine duty.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Confucianism:</strong> Provided the structural framework for relationships and society. It emphasized moral righteousness, filial piety, and a strict hierarchy of loyalty to one’s lord.</li>
+            </ul>
+
+            <p class="story-text" style="margin-top: 2rem;">
+                While the warrior ethos existed during the chaotic wars of the Kamakura and Muromachi periods, the code was officially formalized during the peaceful Edo period. With no active wars to fight, the samurai transformed from raw front-line soldiers into moral leaders, administrators, and scholars, requiring a standardized code of conduct to justify their elite social status.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/bushido_samurai_dojo.png" alt="Samurai sitting in dojo" class="story-image" />
+            </div>
+
+            <h2 class="section-title">How it Was Used</h2>
+            <p class="story-text">
+                Bushido served as both a practical guide for daily life and a strict spiritual anchor:
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Governance and Discipline:</strong> In times of peace, it dictated how a samurai should carry himself, treat others, and manage civic duties. It kept an entire class of armed elite disciplined and accountable.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Total Loyalty:</strong> It demanded absolute, unquestioning loyalty to one's feudal lord. A samurai was expected to sacrifice their life, family, and personal desires for their master's cause.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Ritual Honor:</strong> Honor was considered more valuable than life itself. If a samurai disgraced themselves, failed a mission, or lost their lord, Bushido prescribed seppuku as the only way to restore honor to their name and family line.</li>
+            </ul>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Seven Virtues</h2>
+            <p class="story-text" style="margin-bottom: 2rem;">
+                At the core of this code are seven primary virtues that every samurai was bound to uphold:
+            </p>
+
+            <div style="max-width: 500px; margin: 0 auto; text-align: left; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 12px; padding: 2rem;">
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem;"><span style="color: var(--accent-color); margin-right: 1rem;">義</span> <strong>Gi</strong> — Righteousness</p>
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem;"><span style="color: var(--accent-color); margin-right: 1rem;">勇</span> <strong>Yuu</strong> — Heroic Courage</p>
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem;"><span style="color: var(--accent-color); margin-right: 1rem;">仁</span> <strong>Jin</strong> — Benevolence</p>
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem;"><span style="color: var(--accent-color); margin-right: 1rem;">礼</span> <strong>Rei</strong> — Respect</p>
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem;"><span style="color: var(--accent-color); margin-right: 1rem;">誠</span> <strong>Makoto</strong> — Absolute Sincerity</p>
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem;"><span style="color: var(--accent-color); margin-right: 1rem;">名誉</span> <strong>Meiyo</strong> — Honor</p>
+                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0;"><span style="color: var(--accent-color); margin-right: 1rem;">忠義</span> <strong>Chugi</strong> — Loyalty</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-intro" class="profound-btn">Step onto the path.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Gi Screen -->
+    <main class="container hidden" id="bushido-gi-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Spine of the Samurai</div>
+            <h1>Gi: Rectitude</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "To die when it is right to die, to strike when to strike is right."
+            </p>
+
+            <p class="story-text">
+                <strong>Gi (義)</strong> is often translated as Righteousness, Justice, or Rectitude. Of all the virtues in Bushido, samurai philosophers considered Gi the most absolute and uncompromising.
+            </p>
+
+            <p class="story-text">
+                If Bushido is the skeleton of the samurai, Gi is the spine. Inazo Nitobe, who famously documented the samurai code, described Gi as the power to make an unwavering decision based strictly on what is morally right.
+            </p>
+
+            <p class="story-text">
+                It is the ability to look at a situation, strip away all personal bias, fear, or desire for reward, and choose the correct path. There are no gray areas in Gi—an action is either right or it is wrong.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/gi_sword_balance.png" alt="Sword outweighing jewels on a scale" class="story-image" />
+            </div>
+
+            <h2 class="section-title">The Weight of the Sword: A Story of Gi</h2>
+            <p class="story-text">
+                During the Edo period, a highly skilled samurai served under a powerful but increasingly paranoid regional lord (daimyo). The lord had grown suspicious of a rival clan and, in a fit of rage, ordered his samurai to assassinate the rival leader's peaceful, unarmed envoy who was traveling through their territory.
+            </p>
+
+            <p class="story-text">
+                Assassinating an unarmed envoy was a massive violation of diplomatic honor and morality. However, under the Bushido code, a samurai also owed absolute loyalty (Chugi) to his lord.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/gi_envoy_warning.png" alt="Samurai warning the envoy" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                The samurai intercepted the envoy on the road. But instead of drawing his sword, he warned the envoy of the plot and told him to flee.
+            </p>
+
+            <p class="story-text">
+                Returning to his lord, the samurai knelt and confessed that he had let the target go. When the furious lord demanded to know why he had disobeyed a direct order, the samurai replied:
+            </p>
+
+            <p class="story-text" style="padding-left: 2rem; border-left: 3px solid var(--accent-color); margin: 2rem 0; font-style: italic;">
+                "My life belongs to you, my Lord, but my honor belongs to heaven. To kill an innocent, unarmed man is unjust. I could not commit a wrong in your name, for that would stain your honor as well as mine."
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/gi_samurai_confession.png" alt="Samurai confessing to his lord" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Knowing the penalty for disobedience, the samurai did not wait for the executioner. He immediately drew his short sword and committed seppuku. He sacrificed his own life to uphold Gi (doing what is right) while simultaneously paying the ultimate price to satisfy his loyalty to his lord. He proved that true justice requires taking responsibility for the consequences of your actions.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Gi in Today’s World</h2>
+            <p class="story-text">
+                We no longer carry swords, but the core mechanism of Gi—moral courage in the face of personal cost—is incredibly relevant today. Modern Gi is about integrity when it is inconvenient.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">The Corporate Whistleblower:</strong> It is easy to look the other way when a company is doing something unethical because speaking up risks your salary, your career, and your reputation. Gi is the voice that says, "This is wrong, and I must report it, even if I lose my job."</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Owning Your Mistakes:</strong> Imagine you make a critical error on a project that costs the company money. You could easily blame a junior colleague or blame a "glitch." Practicing Gi means walking into your manager's office and saying, "I made this mistake. Here is how I plan to fix it." You accept the discomfort because honesty is the only right path.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Defending the Vulnerable:</strong> If you see someone being unfairly targeted, mocked, or bullied—whether in a boardroom, a classroom, or online—the safe thing to do is to stay quiet. Gi demands that you step in and stand up for them, even if it means drawing the hostility onto yourself.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Doing the Right Thing When No One is Watching:</strong> It’s as simple as finding a lost wallet with a lot of cash in it. Nobody saw you pick it up. You need the money. But Gi is the internal compass that makes you turn it in simply because keeping it is unjust.</li>
+            </ul>
+
+            <p class="story-text" style="margin-top: 3rem;">
+                Gi is the ultimate antidote to "taking the easy way out." It reminds us that our character is defined entirely by the hard choices we make when we have something to lose.
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-gi" class="profound-btn">Choose the Right Path.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Yuu Screen -->
+    <main class="container hidden" id="bushido-yuu-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Mastery of Fear</div>
+            <h1>Yū: Courage</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "Perceiving what is right and doing it not reveals a lack of courage."
+            </p>
+
+            <p class="story-text">
+                <strong>Yuu (勇)</strong> translates to Heroic Courage or Bravery. However, the samurai drew a very sharp line between true courage and reckless thrill-seeking.
+            </p>
+
+            <p class="story-text">
+                In Bushido, running blindly into a dangerous situation without a purpose wasn't considered brave; it was considered foolish, or what they called "the courage of a beast." True Yuu is deeply connected to Gi (Justice/Righteousness).
+            </p>
+
+            <p class="story-text">
+                Yuu is not the absence of fear. It is the ability to feel terror, acknowledge the danger, and still take the necessary action with a calm and focused mind because it is the right thing to do.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Calm Before the Charge: A Story of Yuu</h2>
+            <p class="story-text">
+                During the chaotic Sengoku period, a clan's army was ambushed and forced into a devastating retreat. To save the main force and their lord, a small detachment had to stay behind to block a narrow mountain pass. This role, known as the shingari (the rear guard), was a guaranteed death sentence.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/yuu_commander_water.png" alt="Commander holding rippling water cup" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                A seasoned samurai volunteered to lead this doomed detachment. As the overwhelming enemy force approached, kicking up clouds of dust in the distance, a younger samurai in the rear guard began to shake violently, his teeth chattering in absolute terror. He looked at his commander, expecting to be scolded for his cowardice.
+            </p>
+
+            <p class="story-text">
+                Instead, he saw the commander holding a cup of water. The commander's own hands were trembling so much that the water rippled.
+            </p>
+
+            <p class="story-text" style="padding-left: 2rem; border-left: 3px solid var(--accent-color); margin: 2rem 0; font-style: italic;">
+                "My body trembles because it knows it is going to die today," he said calmly. "But my mind is at peace, because I know we are saving our brothers."
+            </p>
+
+            <p class="story-text">
+                When the enemy vanguard finally hit the pass, the commander didn't fight with wild, panicked rage. He fought with terrifying, cold precision. He had already accepted his death, which completely freed him from the fear of it. 
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/yuu_pass_battle.png" alt="Heroic samurai fiercely fighting off overwhelming enemy army" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                By mastering his internal panic, he and his small band held the pass for hours, ensuring the survival of their clan. The story highlights that Yuu isn't about being fearless; it is about acting with tactical mastery and resolve when every instinct tells you to run.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/yuu_dead_standing.png" alt="Heroic samurai dead but standing" class="story-image" />
+            </div>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Yuu in Today’s World</h2>
+            <p class="story-text">
+                We rarely face literal armies, but the essence of Yuu remains exactly the same: confronting the things that terrify us because they must be done.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Having the Hard Conversation:</strong> Facing a loved one or a friend to discuss a painful truth. It is terrifying, and avoiding it feels much safer, but Yuu means walking into that discomfort for the sake of the relationship.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Stepping into the Unknown:</strong> Quitting a secure but unfulfilling job, or moving to a new city where you know no one. The fear of failure is natural; Yuu is feeling that fear and taking the leap anyway because staying stagnant is worse.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Vulnerability:</strong> True courage isn't always aggressive. Sometimes, it is simply the bravery to lower your armor, admit your flaws, and ask for help when you are struggling.</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-yuu" class="profound-btn">Master Your Fear.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Jin Screen -->
+    <main class="container hidden" id="bushido-jin-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Sheath of the Sword</div>
+            <h1>Jin: Benevolence</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "True strength is not measured by how easily you can destroy someone, but by your capacity for gentleness, empathy, and mercy."
+            </p>
+
+            <p class="story-text">
+                <strong>Jin (仁)</strong> translates to Benevolence, Compassion, or Universal Love. If Gi (Justice) and Yuu (Courage) are the sharp edges of the samurai’s sword, Jin is the sheath that keeps it safely contained.
+            </p>
+
+            <p class="story-text">
+                Bushido recognized a very dangerous reality: giving a class of men absolute physical power and the legal right to kill could easily create a society of bloodthirsty tyrants. Jin was the mandatory counterbalance.
+            </p>
+
+            <p class="story-text">
+                It taught that a warrior without Jin was not a samurai; they were merely a killer. Compassion separated the noble warrior from the beast.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Gift of Salt: A Story of Jin</h2>
+            <p class="story-text">
+                During the 16th century, Japan was torn apart by civil war. Two of the most brilliant and legendary warlords of the era, Uesugi Kenshin and Takeda Shingen, were bitter rivals. They fought a series of brutal, bloody battles against one another for years, matching each other blow for blow.
+            </p>
+
+            <p class="story-text">
+                Shingen’s territory was located deep in the mountains, completely landlocked. In an attempt to crush him, a third rival warlord enacted an economic blockade, cutting off all shipments of salt to Shingen’s province. In an era before refrigeration, salt wasn't just a seasoning; it was an absolute necessity for preserving food and surviving the harsh winters. Without it, Shingen’s people—civilians, farmers, and soldiers alike—would slowly starve and perish.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/jin_kenshin_noble.png" alt="Legendary samurai warlord looking out from a coastal cliff" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                When Uesugi Kenshin heard that his greatest enemy was being deprived of a basic human necessity, he was disgusted. He did not see it as a strategic advantage; he saw it as an act of cowardice that punished the innocent.
+            </p>
+
+            <p class="story-text">
+                Kenshin secretly organized his own supply lines and sent massive shipments of salt from his coastal territory directly into the lands of his sworn enemy.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/jin_salt_caravan.png" alt="Ancient Japanese caravans transporting massive shipments of salt through harsh snowy mountains" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                When criticized for aiding his rival, Kenshin famously replied:
+            </p>
+
+            <p class="story-text" style="padding-left: 2rem; border-left: 3px solid var(--accent-color); margin: 2rem 0; font-style: italic;">
+                "Wars are to be won with swords and spears, not with rice and salt."
+            </p>
+
+            <p class="story-text">
+                He demonstrated the ultimate form of Jin. He wanted to defeat his enemy on the battlefield with honor, but he refused to let his enemy's people suffer from cruelty. He separated his duty as a warrior from his shared humanity.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/jin_samurai_tiger_cubs.png" alt="Samurai with blood on sword gently touching tiger cubs" class="story-image" />
+            </div>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Jin in Today’s World</h2>
+            <p class="story-text">
+                You possess power. That power might be your intelligence, your position in a company, your financial resources, or simply your physical strength. Jin is the deliberate choice to use that power to uplift others rather than to crush them.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Empathy in Leadership:</strong> When someone under your authority makes a mistake, Jin is choosing to mentor and correct them with patience rather than publicly humiliating them. It is remembering their humanity before focusing on their failure.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">The Silent Acts of Kindness:</strong> Giving your time, resources, or a listening ear to someone who can offer you absolutely nothing in return. Jin doesn't seek an audience or a reward; it simply seeks to alleviate suffering.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Refusing to Exploit Weakness:</strong> If a competitor or a rival makes a massive personal mistake, it is easy to mock them or take advantage. Jin is the voice that says, "I will beat you on a level playing field, not by capitalizing on your lowest moment."</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-jin" class="profound-btn">Embrace Compassion.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Rei Screen -->
+    <main class="container hidden" id="bushido-rei-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Core of Connection</div>
+            <h1>Rei: Respect</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "True respect is motivated by a deep acknowledgment of another person's inherent humanity."
+            </p>
+
+            <p class="story-text">
+                <strong>Rei (礼)</strong> translates to Respect or Politeness. However, to a samurai, Rei was vastly more profound than simply having good manners or knowing which fork to use at dinner.
+            </p>
+
+            <p class="story-text">
+                In Bushido, Rei is the outward expression of the previous virtue, Jin (Compassion). If you truly care for the well-being of others, you must treat them with dignity. The samurai believed that without Rei, a warrior was no better than an animal. 
+            </p>
+
+            <p class="story-text">
+                True respect is not motivated by a fear of punishment or a desire to look good; it is motivated by a deep acknowledgment of another person's inherent humanity, even if that person is your sworn enemy.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Tea Master and the Ronin: A Story of Rei</h2>
+            <p class="story-text">
+                During the Edo period, a peaceful tea master who served a powerful lord was traveling to Edo (modern Tokyo). He was a master of the tea ceremony, a practice entirely defined by harmony, precise etiquette, and profound respect. He had never held a weapon in his life.
+            </p>
+
+            <p class="story-text">
+                While walking through the streets, he accidentally bumped the scabbard of a loud, aggressive ronin (a masterless samurai). Despite the tea master’s immediate and profound apologies, the ronin saw an opportunity to extort money. He refused the apology and challenged the tea master to a duel to the death.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/rei_tea_master_ronin.png" alt="Peaceful tea master bumping into an aggressive ronin" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Knowing he would die, the tea master visited a local dojo to learn how to at least die with honor. The resident swordmaster, hearing the story, told him:
+            </p>
+
+            <p class="story-text" style="padding-left: 2rem; border-left: 3px solid var(--accent-color); margin: 2rem 0; font-style: italic;">
+                "I cannot teach you how to win, but I can teach you how to die. When you face him, do not think of the sword. Simply treat the duel exactly as you treat your tea ceremony. Approach him with the utmost respect, absolute focus, and perfect calm."
+            </p>
+
+            <p class="story-text">
+                The next morning, the tea master met the ronin. He did not beg. He did not show fear. He bowed deeply, with immaculate and terrifying precision. He removed his coat with the exact, measured grace he used to fold his tea cloths. He drew his borrowed sword and stood perfectly still, his mind completely focused on the respectful execution of his final "ceremony."
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/rei_duel_bow.png" alt="Serene tea master bowing with immaculate precision on battlefield" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                The ronin, seeing this absolute, unwavering display of Rei and inner calm, was suddenly overwhelmed with dread. He realized he was facing someone who had completely mastered themselves. Sweating and trembling, the ronin dropped his weapon, bowed to the tea master, begged for forgiveness, and fled.
+            </p>
+
+            <p class="story-text">
+                The tea master won not through violence, but through the sheer, overpowering force of perfect respect.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Rei in Today’s World</h2>
+            <p class="story-text">
+                When applied broadly today, Rei is about maintaining an internal standard of behavior, regardless of how other people are acting. It is the refusal to let your environment drag down your character.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Dignity in Disagreement:</strong> When engaging in a conflict or debate, it is the practice of attacking the problem rather than degrading the person. It means maintaining decorum, avoiding petty insults, and treating opposition not as an excuse for hostility, but as a test of your own emotional control.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Reverence for Shared Spaces:</strong> It is the quiet understanding that the spaces we move through are shared with others. Rei is the simple act of leaving an environment exactly as you found it, minimizing disruptions, and moving through the world in a way that does not force others to carry your burdens.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Familiarity Without Contempt:</strong> Often, we show the least respect to the people we are closest to because we feel comfortable. Rei is the conscious effort to never take those relationships for granted, maintaining a baseline of politeness and appreciation even when the formalities of public life are stripped away.</li>
+            </ul>
+
+            <p class="story-text" style="margin-top: 3rem;">
+                Rei is the understanding that respect is not something the other person has to earn; it is something you provide unconditionally because of who you are.
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-rei" class="profound-btn">Master Your Respect.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Makoto Screen -->
+    <main class="container hidden" id="bushido-makoto-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Weight of a Word</div>
+            <h1>Makoto: Honesty</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "For a samurai, to speak a thing was to make it reality. There was no difference between promising an action and completing that action."
+            </p>
+
+            <p class="story-text">
+                <strong>Makoto (誠)</strong> translates to Absolute Sincerity or Honesty. In Bushido, this virtue goes far beyond simply "not telling lies."
+            </p>
+
+            <p class="story-text">
+                To understand Makoto, look at how the Japanese kanji character for it is constructed: it combines the character for "word" (言) with the character for "to accomplish/become" (成). For a samurai, to speak a thing was to make it reality. There was no difference between promising an action and completing that action.
+            </p>
+
+            <p class="story-text">
+                Because of this, samurai viewed written contracts as an insult to their honor—to ask for a signature implied that their spoken word was not enough.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Weight of a Word: A Story of Makoto</h2>
+            <p class="story-text">
+                During the turbulent Sengoku period, a samurai was captured by an enemy clan after a fierce battle. Recognizing his rank and skill, the enemy warlord ordered his execution but granted him an audience first.
+            </p>
+
+            <p class="story-text">
+                The captured samurai bowed respectfully and made a single request: "My lord, I am prepared to die today. However, I have an aging mother in my home village who has no one else to arrange her care, and a debt to a local merchant I have not yet settled. Grant me five days to return home, settle my affairs, and say goodbye. On the dawn of the sixth day, I will return here to present my head to your executioner."
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/makoto_request.png" alt="Captured samurai bowing to enemy warlord requesting five days" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                The enemy warlord's advisors laughed. To let a prisoner walk free based on a promise seemed incredibly foolish.
+            </p>
+
+            <p class="story-text">
+                But a senior general of the enemy clan stepped forward. "He is a true samurai," the general said. "I will offer my own life as a guarantee. If he does not return, you may take my head instead." The warlord agreed.
+            </p>
+
+            <p class="story-text">
+                The samurai was released. He traveled tirelessly, settled his debts, arranged for his mother’s care, and immediately began the exhausting journey back. But a massive storm struck, washing out the main bridge.
+            </p>
+
+            <p class="story-text">
+                Dawn of the sixth day broke. The executioner prepared his blade, and the senior general knelt to offer his own neck, fully accepting the consequence of his guarantee. Just as the blade was raised, a battered, mud-soaked figure stumbled into the courtyard, gasping for breath. It was the captured samurai. He had nearly drowned swimming across a flooded river in the dark, running through the night simply to ensure he died on time.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/makoto_arrival.png" alt="Mud-soaked samurai stumbling into the courtyard to save the general" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                He had given his word. To a true warrior, surviving by breaking a promise was a fate far worse than death.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Void: What a Person Becomes Without Makoto</h2>
+            <p class="story-text">
+                Without Makoto, a person rots from the inside out. Bushido teaches that if you lack absolute sincerity, every other virtue becomes a mask.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/makoto_broken_sword.png" alt="A broken sword resting with an ancient scroll" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                Without it, Rei (Respect) becomes manipulation and flattery. Jin (Compassion) becomes a performance done only to look good in front of others. Yuu (Courage) becomes an empty boast.
+            </p>
+
+            <p class="story-text">
+                A person without Makoto becomes fractured. They have to constantly manage a web of half-truths, excuses, and hidden motives, which makes them inherently fragile and cowardly. They lose the core of their identity because their actions no longer align with their words. Ultimately, they become a hollow shell—someone who cannot be trusted by others, and tragically, someone who can no longer trust themselves.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Makoto in Today’s World</h2>
+            <p class="story-text">
+                In our modern lives, we rarely stake our physical lives on our words, but Makoto is still the foundational glue of all meaningful relationships.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">The Eradication of "Maybe":</strong> It is the practice of meaning exactly what you say. If you cannot commit to something, you say no. If you commit, it becomes an absolute priority. It is eliminating the habit of making vague, half-hearted promises just to avoid disappointing someone in the moment.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Alignment of the Private and Public Self:</strong> Makoto is acting the exact same way when you are completely alone as you do when everyone is watching. It is the refusal to put on a "performance" for society. Your thoughts, your words, and your actions are unified into one consistent truth.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Owning Your Reality:</strong> When you fall short, Makoto demands that you face the reality of the failure without deploying excuses, shifting the blame, or softening the blow. It is the quiet, powerful sincerity of saying, "I said I would do this, and I did not."</li>
+            </ul>
+
+            <p class="story-text" style="margin-top: 3rem; text-align: center;">
+                Makoto is the ultimate form of self-respect. It ensures that when you speak, the world can rely on it as an unchangeable fact.
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-makoto" class="profound-btn">Honor Your Word.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Meiyo Screen -->
+    <main class="container hidden" id="bushido-meiyo-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Internal Anchor</div>
+            <h1>Meiyo: Honor</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "Wealth can be lost in a fire, but a tarnished name cannot be washed clean."
+            </p>
+
+            <p class="story-text">
+                <strong>Meiyo (名誉)</strong> translates to Honor, Reputation, or Prestige. However, in the context of Bushido, it is best understood as a profound consciousness of personal dignity and self-worth.
+            </p>
+
+            <p class="story-text">
+                If the other virtues are the actions a samurai takes, Meiyo is the reason they take them. It is not about feeding the ego or demanding that other people worship you; rather, it is the internal standard you hold yourself to.
+            </p>
+
+            <p class="story-text">
+                For a samurai, their name was immortal. The physical body would eventually die, but the honor attached to their name and their bloodline would echo for generations. To disgrace that name through cowardice, lying, or cruelty was a fate literally worse than death.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Weight of a Name: A Story of Meiyo</h2>
+            <p class="story-text">
+                During a long era of peace, a once-prestigious samurai family had fallen into severe poverty after the passing of their lord. The current head of the family, a skilled but impoverished warrior, lived in a rundown home with a leaking roof, barely able to afford rice. Yet, his armor was polished, his sword was perfectly maintained, and he carried himself with the same absolute dignity as a lord in a castle.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/meiyo_impoverished_samurai.png" alt="Impoverished but dignified samurai in rundown home with polished armor" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                A wealthy, corrupt merchant saw an opportunity. He was running an illegal smuggling ring and needed a respectable, high-ranking samurai name to forge documents and bypass the local guards. He visited the impoverished warrior and offered him a chest of gold—enough wealth to live in luxury for the rest of his life. All the samurai had to do was sign his family name to a few ledgers and look the other way.
+            </p>
+
+            <p class="story-text">
+                The samurai looked at the gold, then looked at the merchant.
+            </p>
+
+            <p class="story-text" style="padding-left: 2rem; border-left: 3px solid var(--accent-color); margin: 2rem 0; font-style: italic;">
+                "You offer to feed my body," the samurai said calmly, "but you ask me to starve my soul. My ancestors shed their blood to ensure the name I carry means justice and truth. It is the only inheritance I have to leave to my children."
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/meiyo_refusing_gold.png" alt="Dignified samurai refusing chest of gold from corrupt merchant" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                He refused the gold and ordered the merchant out of his home. He remained in poverty until the end of his days, but he died with his reputation absolutely pristine. He understood that wealth can be lost in a fire, but a tarnished name cannot be washed clean.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Void: What a Person Becomes Without Meiyo</h2>
+            <p class="story-text">
+                Without Meiyo, a person becomes entirely transactional. They become a slave to consequence, reward, and convenience.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/meiyo_hollow_shell.png" alt="A hollow silhouette of a person grasping for gold" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                When you lack an internal sense of honor, your self-worth becomes entirely dependent on what others can give you—money, attention, status, or comfort. You become an opportunist who will change their morals depending on who is in the room. Without a baseline of personal dignity, a person is willing to compromise their integrity for a temporary shortcut. They become hollow, navigating life merely by asking, "What can I get away with?" rather than, "Who do I want to be?"
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Meiyo in Today’s World</h2>
+            <p class="story-text">
+                In a modern context, applying Meiyo means establishing a personal code of conduct that you refuse to violate, regardless of the payout.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">The Refusal to Compromise Identity:</strong> It is the quiet resolve to walk away from an opportunity, a relationship, or an advantage because securing it requires you to act in a way that makes you feel cheap or dishonest. It is valuing your self-respect over a shortcut.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Guarding Your Signature:</strong> Just like the samurai protecting his name, modern Meiyo is treating your personal endorsement as sacred. If you attach your name to a project, a promise, or a recommendation, you ensure it represents your highest standard of quality and truth.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Elevation Above the Mud:</strong> When others resort to petty behavior, gossip, or underhanded tactics to get ahead, honor is the mechanism that keeps you from retaliating in kind. You refuse to lower your own standards to match a degraded environment, simply because you think too highly of your own character to act poorly.</li>
+            </ul>
+
+            <p class="story-text" style="margin-top: 3rem; text-align: center;">
+                Meiyo is the internal anchor. It ensures that when you look in the mirror at the end of the day, you respect the person looking back at you.
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-meiyo" class="profound-btn">Defend Your Honor.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido: Chugi Screen -->
+    <main class="container hidden" id="bushido-chugi-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Great Anchor</div>
+            <h1>Chūgi: Loyalty</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s;">
+            <p class="story-text" style="font-size: 1.2rem; font-style: italic; color: var(--accent-color); text-align: center; margin-bottom: 3rem;">
+                "True Chugi required a samurai to serve the best interests of their lord, even if it meant giving their lord uncomfortable truths or correcting their path."
+            </p>
+
+            <p class="story-text">
+                <strong>Chūgi (忠義)</strong> translates to Duty or Loyalty. For the samurai, this was the great anchor of their existence. It was the glue that held the feudal system together, binding a warrior to their lord, their family, and their community.
+            </p>
+
+            <p class="story-text">
+                However, Chugi was not mindless obedience. Blindly following a master into ruin or corruption was considered weak. True Chugi required a samurai to serve the best interests of their lord, even if it meant giving their lord uncomfortable truths or correcting their path. Ultimately, it meant recognizing that your life was not entirely your own—it belonged to a cause vastly larger than yourself.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Shout from the Cross: A Story of Chugi</h2>
+            <p class="story-text">
+                During a brutal regional war, a warlord’s castle was surrounded by a massive enemy army. The siege had dragged on for months, and the defenders were starving and losing hope. The lord asked for a volunteer to slip through the dense enemy encampment in the dead of night to reach an allied clan and beg for reinforcements.
+            </p>
+
+            <p class="story-text">
+                A low-ranking but fiercely loyal samurai volunteered. He successfully navigated the enemy lines, ran for two days without sleep, and reached the ally. The allied lord promised that a massive relief force would march immediately.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/chugi_samurai_running.png" alt="Loyal samurai sprinting through dense enemy lines in the dead of night" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                His mission technically complete, the samurai could have stayed safely behind. Instead, he chose to sneak back through the enemy lines to deliver the good news, knowing his comrades desperately needed hope to hold out.
+            </p>
+
+            <p class="story-text">
+                He was captured just outside his own castle walls.
+            </p>
+
+            <p class="story-text">
+                The enemy commander, knowing the defenders were on the verge of surrender, made the samurai an offer: "I will spare your life and reward you with gold. All you have to do is stand before the castle gates and shout to your lord that the ally refused, and that no help is coming."
+            </p>
+
+            <p class="story-text">
+                The samurai agreed. The enemy guards marched him to the front of the castle. His starving comrades and his lord looked down from the battlements.
+            </p>
+
+            <p class="story-text" style="padding-left: 2rem; border-left: 3px solid var(--accent-color); margin: 2rem 0; font-style: italic;">
+                Taking a deep breath, the samurai shouted at the top of his lungs: "Hold fast, my Lord! An army of thousands is only two days away! Do not surrender!"
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/chugi_shout_from_cross.png" alt="Captured samurai shouting hope to his lord from outside the castle walls" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                He was executed instantly on the spot. He gave up a guaranteed life of wealth because his absolute duty to his lord’s survival outweighed his own existence. The defenders, fueled by his final act of loyalty, held the walls until the reinforcements arrived, winning the war.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">The Void: What a Person Becomes Without Chugi</h2>
+            <p class="story-text">
+                Without Chugi, a person becomes a mercenary in the story of their own life.
+            </p>
+
+            <div class="story-image-container" style="margin: 4rem auto;">
+                <img src="assets/chugi_mercenary_void.png" alt="A lonely mercenary silhouette representing the void without Chugi" class="story-image" />
+            </div>
+
+            <p class="story-text">
+                When you lack loyalty to anything greater than yourself, every decision becomes a calculation of immediate personal benefit. A person without duty abandons relationships, communities, and commitments the exact moment they become difficult or inconvenient. Because they serve nothing but their own desires, they build nothing that lasts. They become transient and isolated, surrounded only by fair-weather connections. Ultimately, an existence without duty is deeply lonely, because a life dedicated entirely to the self is a very small life.
+            </p>
+
+            <h2 class="section-title" style="margin-top: 4rem;">Chugi in Today’s World</h2>
+            <p class="story-text">
+                In a modern context, Chugi is the willingness to be a permanent, unshakeable pillar for something or someone other than yourself.
+            </p>
+
+            <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Steadfastness in the Storm:</strong> It is remaining faithfully by the side of those you care about when they are experiencing their darkest, most difficult chapters. It is the refusal to abandon ship simply because the waters have gotten rough.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Devotion to the Unseen Mission:</strong> It is dedicating your time and energy to a long-term goal or community where you may never receive personal glory or recognition. You do the quiet, unglamorous work simply because the work matters and it is your duty to carry it forward.</li>
+                <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">The Burden of Reliability:</strong> It is being the person that others know, without a shadow of a doubt, they can depend on. Chugi is the conscious acceptance of that weight—the realization that people are relying on your stability, and therefore, you do not have the luxury of giving up.</li>
+            </ul>
+
+            <p class="story-text" style="margin-top: 3rem; text-align: center;">
+                Chugi is the ultimate rejection of selfishness. It is finding profound meaning in the act of standing watch for the things you hold sacred.
+            </p>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-finish-bushido-chugi" class="profound-btn">Embrace Your Duty.</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Foundation Completion Screen -->
+    <main class="container hidden" id="congrats-foundation-screen">
+        <header class="header fade-in">
+            <div class="subtitle">A Solid Foundation</div>
+            <h1>The Elements Mastered</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 2rem;">⛩️</div>
+            <p class="story-text" style="font-size: 1.3rem; margin-bottom: 2rem;">
+                You have walked the path of the four elements. You have learned the fluidity of Water (Mushin), the enduring calm of Earth (Ichi-go ichi-e), the focused tension of Fire (Zanshin), and the immovable stillness of Wind (Fudoshin).
+            </p>
+            <p class="story-text" style="font-size: 1.3rem; margin-bottom: 3rem; color: var(--accent-color);">
+                The foundation of your spirit is now forged in iron. The gates to the warrior's code stand open before you.
+            </p>
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-continue-to-bushido" class="profound-btn">Enter Bushidō</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bushido Completion Screen -->
+    <main class="container hidden" id="congrats-bushido-screen">
+        <header class="header fade-in">
+            <div class="subtitle">The Forged Blade</div>
+            <h1>The Way of the Warrior</h1>
+        </header>
+
+        <div class="story-content fade-in" style="animation-delay: 0.2s; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 2rem;">⚔️</div>
+            <p class="story-text" style="font-size: 1.3rem; margin-bottom: 2rem;">
+                You have tempered your soul with the seven virtues of the samurai. Rectitude, Courage, Benevolence, Respect, Honesty, Honor, and Loyalty now flow through your veins.
+            </p>
+            <p class="story-text" style="font-size: 1.3rem; margin-bottom: 3rem; color: var(--accent-color);">
+                You are no longer merely a student of the blade; you are a master of your own spirit. But the hardest path still remains. Prepare yourself for the Dokkōdō—the way of walking alone.
+            </p>
+            <div style="text-align: center; margin-top: 4rem;">
+                <button id="btn-continue-to-dokkodo" class="profound-btn">Walk Alone</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dashboard / Homescreen -->
+    <main class="container hidden" id="home-dashboard">
+        <header class="header fade-in">
+            <div class="subtitle">Your Journey</div>
+            <h1>The Zen Pathway</h1>
+        </header>
+
+        <!-- Tabs Navigation -->
+        <nav class="dashboard-tabs fade-in" style="animation-delay: 0.2s;">
+            <button class="tab-btn active" data-tab="pathway">Pathway</button>
+            <button class="tab-btn" data-tab="practice">Practice</button>
+            <button class="tab-btn" data-tab="garden">Garden</button>
+            <button class="tab-btn" data-tab="journey">Journey</button>
+        </nav>
+
+        <!-- Tab Contents -->
+        <div class="tab-content-container fade-in" style="animation-delay: 0.4s;">
+            
+            <!-- Pathway Tab -->
+            <div id="tab-pathway" class="tab-panel active">
+                <div class="pathway-timeline">
+                    <!-- Chapter 1 (Unlocked) -->
+                    <div class="chapter-card unlocked" id="chapter-1-card">
+                        <div class="chapter-status-icon" id="ch1-icon">▶</div>
+                        <div class="chapter-card-content">
+                            <h3>Chapter 1: Ichi Go Ichi E</h3>
+                            <p>One time, one meeting. You have embraced the fleeting nature of reality.</p>
+                            <span class="status-badge active-badge" id="ch1-badge">Up Next</span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2 (Locked) -->
+                    <div class="chapter-card locked" id="chapter-2-card">
+                        <div class="chapter-status-icon" id="ch2-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Chapter 2: Mushin</h3>
+                            <p>No Mind. The art of acting without conscious thought or hesitation.</p>
+                            <span class="status-badge locked-badge" id="ch2-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3 (Locked) -->
+                    <div class="chapter-card locked" id="chapter-3-card">
+                        <div class="chapter-status-icon" id="ch3-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Chapter 3: Zanshin</h3>
+                            <p>Lingering Awareness. Maintaining profound presence even after the action is done.</p>
+                            <span class="status-badge locked-badge" id="ch3-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 4 (Locked) -->
+                    <div class="chapter-card locked" id="chapter-4-card">
+                        <div class="chapter-status-icon" id="ch4-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Chapter 4: Fudoshin</h3>
+                            <p>Immovable Mind. Remaining perfectly calm amidst absolute chaos.</p>
+                            <span class="status-badge locked-badge" id="ch4-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <!-- Section Divider: Bushido -->
+                    <div class="pathway-section-header fade-in" style="margin-top: 4rem;">
+                        <h2 class="section-title">Bushido <span style="font-weight: 200; font-family: var(--font-kanji);">武士道</span></h2>
+                        <div class="section-quote">
+                            <p>"You cannot explore a forest without first reaching its edge. Even if the gates were flung wide open, you must still walk the path to stand within the trees. These teachings are not hidden—they merely await your arrival."</p>
+                        </div>
+                    </div>
+
+                    <!-- Bushido Chapters (Locked) -->
+                    <div class="chapter-card locked bushido-card" id="bushido-intro-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Bushido Introduction</h3>
+                            <p>The Way of the Warrior. The unwritten code of absolute moral principles.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-gi-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Gi: Rectitude <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">義</span></h3>
+                            <p>The bone that gives firmness and stature. Doing what is right without hesitation.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-yuu-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Yū: Courage <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">勇</span></h3>
+                            <p>Doing what is right despite the fear of death. Heroic bravery.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-jin-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Jin: Benevolence <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">仁</span></h3>
+                            <p>Love, magnanimity, affection for others, sympathy, and pity.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-rei-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Rei: Respect <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">礼</span></h3>
+                            <p>Courtesy and politeness. Respecting the dignity of others.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-makoto-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Makoto: Honesty <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">誠</span></h3>
+                            <p>Absolute sincerity. Speaking and acting truthfully.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-meiyo-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Meiyo: Honor <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">名誉</span></h3>
+                            <p>A vivid consciousness of personal dignity and worth.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card locked bushido-card" id="bushido-chugi-card">
+                        <div class="chapter-status-icon">🔒</div>
+                        <div class="chapter-card-content">
+                            <h3>Chūgi: Loyalty <span style="font-weight: 200; font-family: var(--font-kanji); font-size: 0.9em; margin-left: 5px;">忠義</span></h3>
+                            <p>True allegiance. Being completely devoted to your principles and duties.</p>
+                            <span class="status-badge locked-badge">Locked</span>
+                        </div>
+                    </div>
+
+                    <!-- Section Divider: Dokkōdō -->
+                    <div class="pathway-section-header fade-in" style="margin-top: 4rem;">
+                        <h2 class="section-title">Dokkōdō <span style="font-weight: 200; font-family: var(--font-kanji);">獨行道</span></h2>
+                        <div class="section-quote">
+                            <p>"The Way of Walking Alone. To walk the path of the master, one must first master the self."</p>
+                        </div>
+                    </div>
+
+                    <!-- Dokkodo Chapters (Locked) -->
+                    <div class="chapter-card locked dokkodo-card" id="dokkodo-intro-card" style="opacity: 0.6; pointer-events: none;">
+                        <div class="chapter-status-icon">⌛</div>
+                        <div class="chapter-card-content">
+                            <h3>Coming Soon: Dokkōdō</h3>
+                            <p>The 21 precepts of Miyamoto Musashi are currently being inscribed.</p>
+                            <span class="status-badge locked-badge" style="background: rgba(255,255,255,0.05); color: #888;">In Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Tabs (Placeholders) -->
+            <div id="tab-practice" class="tab-panel">
+                <div class="practice-container fade-in" style="max-width: 800px; margin: 4rem auto;">
+                    <header class="header text-center" style="margin-bottom: 3rem;">
+                        <div class="subtitle" style="margin-bottom: 0.5rem; letter-spacing: 2px;">Basic Practice</div>
+                        <h2 class="section-title" style="justify-content: center; font-size: 2.5rem;">Walking Meditation <span style="font-weight: 200; font-family: var(--font-kanji); margin-left: 1rem;">経行</span></h2>
+                    </header>
+
+                    <div class="practice-content" style="background: rgba(255,255,255,0.02); padding: 3rem; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);">
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 1.5rem;">
+                            Walk slow enough to feel every shift of weight — heel lifting, body moving forward, foot meeting ground. That's your anchor.
+                        </p>
+                        
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 1.5rem;">
+                            When your mind drifts into yesterday or tomorrow, the moment you notice you've drifted, that noticing is already the return — just feel the next step land. Leave, return, leave, return. Each return sharpens you.
+                        </p>
+
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 2rem;">
+                            Do it until the walk ends, then carry that same quality of attention into whatever comes next. Don't think about the next step. Don't think about the previous. Feel nature. No distraction.
+                        </p>
+
+                        <div class="section-quote" style="border-left: 2px solid var(--accent-color); padding-left: 1.5rem; margin-top: 3rem; margin-bottom: 1rem;">
+                            <p style="font-size: 1.4rem; font-style: italic; color: var(--accent-color);">
+                                "Leave, return, leave, return. Each return sharpens you."
+                            </p>
+                        </div>
+                </div>
+                    
+                    <!-- Physical Training Section -->
+                    <header class="header text-center" style="margin-top: 5rem; margin-bottom: 3rem;">
+                        <div class="subtitle" style="margin-bottom: 0.5rem; letter-spacing: 2px;">Applied Practice</div>
+                        <h2 class="section-title" style="justify-content: center; font-size: 2.5rem;">Physical Training <span style="font-weight: 200; font-family: var(--font-kanji); margin-left: 1rem;">身体鍛錬</span></h2>
+                    </header>
+
+                    <div class="practice-content" style="background: rgba(255,255,255,0.02); padding: 3rem; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);">
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 2.5rem; color: var(--accent-color);">
+                            Where mind and body connect. Same principle, different equipment.
+                        </p>
+
+                        <ul style="list-style-type: none; padding: 0; margin: 0; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                            <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Every rep is the only rep:</strong> Not a countdown. Feel the load, the breath, the failure. Don't perform the exercise. <em>Be</em> it.</li>
+                            <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Train in bad conditions:</strong> Tired or cold? Go anyway. Prove to your nervous system that performance is unconditional.</li>
+                            <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Remove escape routes:</strong> No music, no phone. Discomfort is your anchor, like the footfall in walking meditation.</li>
+                            <li style="margin-bottom: 1.5rem;"><strong style="color: var(--text-primary);">Rest like you train:</strong> Sleep seriously. Stillness isn't laziness; recovery is training.</li>
+                            <li style="margin-bottom: 2.5rem;"><strong style="color: var(--text-primary);">One practice, full presence:</strong> This exact session, this exact body, this exact day — never again.</li>
+                        </ul>
+                        
+                        <div class="section-quote" style="border-left: 2px solid var(--accent-color); padding-left: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;">
+                            <p style="font-size: 1.3rem; font-style: italic; color: var(--text-primary);">
+                                "The samurai didn't have barbells. But a man doing bicep curls while distracted by a screen—he is exactly what they trained against."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sitting in Silence Section -->
+                    <header class="header text-center" style="margin-top: 5rem; margin-bottom: 3rem;">
+                        <div class="subtitle" style="margin-bottom: 0.5rem; letter-spacing: 2px;">Internal Practice</div>
+                        <h2 class="section-title" style="justify-content: center; font-size: 2.5rem;">Sitting in Silence <span style="font-weight: 200; font-family: var(--font-kanji); margin-left: 1rem;">坐禅</span></h2>
+                    </header>
+
+                    <div class="practice-content" style="background: rgba(255,255,255,0.02); padding: 3rem; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);">
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 1.5rem;">
+                            The samurai sat with themselves deliberately. No input, no task, no goal. Facing a wall sometimes, for hours. Not because it was peaceful. Because it was brutal. Every fear, regret, desire you'd been outrunning all day — it shows up when the noise stops. They didn't flinch. They sat with it until it lost its power.
+                        </p>
+                        
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 1.5rem;">
+                            This was considered as serious as sword practice. Because a man who cannot be alone with himself panics the moment battle goes quiet. The enemy outside is manageable. The enemy inside — doubt, attachment, the desperate need to survive — that one kills you.
+                        </p>
+
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 1.5rem;">
+                            Today we've built an entire civilization around never having to sit with ourselves. Phone the second we wake. Music on the walk. Podcast while eating. We've made silence the enemy without even deciding to. But what you're actually escaping isn't boredom. It's yourself — unfiltered, without distraction confirming you're okay.
+                        </p>
+
+                        <p class="story-text" style="font-size: 1.2rem; line-height: 1.8; text-align: left; margin-bottom: 2rem;">
+                            You cannot master an opponent you haven't faced. And the hardest opponent is always the one inside. So the practice is simple and ruthless. Let whatever surfaces, surface. Don't chase it, don't suppress it. Just watch it the way you watch a step land in walking meditation.
+                        </p>
+
+                        <div class="section-quote" style="border-left: 2px solid var(--accent-color); padding-left: 1.5rem; margin-top: 3rem; margin-bottom: 1rem;">
+                            <p style="font-size: 1.4rem; font-style: italic; color: var(--accent-color);">
+                                "Sit. No input. Just you. Do it until the silence stops feeling like a threat. That's when training has actually begun."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-garden" class="tab-panel">
+                <div class="garden-container" style="text-align: center; padding-top: 4rem; padding-bottom: 4rem;">
+                    <h2 class="section-title" style="margin-bottom: 1.5rem; justify-content: center;">Welcome to your garden</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; font-size: 1.1rem; font-weight: 300;">
+                        A beautiful mind requires constant, gentle cultivation. Just as a monk rakes the sand and prunes the bonsai, you must tend to your daily disciplines. As you walk your pathway and practice, this garden reflects your growing focus.
+                    </p>
+                    
+                    <div class="story-image-container" style="max-width: 350px; margin: 0 auto 4rem auto; border-radius: 50%; overflow: hidden; box-shadow: 0 0 50px rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); aspect-ratio: 1/1;">
+                        <img src="assets/garden_beautiful.png" alt="Beautiful Zen Garden" class="story-image" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+                    </div>
+
+                    <button id="btn-enter-garden" class="profound-btn" style="border-color: var(--accent-color);">Enter Garden</button>
+                </div>
+            </div>
+            <div id="tab-journey" class="tab-panel" style="position: relative; overflow: hidden; border-radius: 12px; min-height: 600px;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/dark_map_bg.png'); background-size: cover; background-position: center; opacity: 0.4; z-index: 0; pointer-events: none; border-radius: inherit;"></div>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,0.2) 20%, rgba(10,10,10,0.2) 80%, rgba(10,10,10,0.9)); z-index: 0; pointer-events: none;"></div>
+                
+                <div style="position: relative; z-index: 1; padding: 4rem 2rem; text-align: center;">
+                    <h2 class="section-title" style="justify-content: center; margin-bottom: 1rem;">Your Journey</h2>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 4rem auto; line-height: 1.6; font-size: 1.1rem; font-weight: 300;">
+                        Every day you return, you walk further on the path. The masters of the past walked this exact same road.
+                    </p>
+                    
+                    <div id="journey-timeline-container" style="max-width: 600px; margin: 0 auto; padding-bottom: 4rem;">
+                        <!-- JS will populate the 35-day timeline here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Garden Interior Screen -->
+    <main class="container hidden" id="garden-interior-screen">
+        <button id="btn-leave-garden" class="tab-btn" style="position: absolute; top: 2rem; left: 2rem;">← Leave Garden</button>
+        
+        <header class="header fade-in">
+            <div class="subtitle" id="garden-date-display">Today</div>
+            <h1>Cultivation</h1>
+        </header>
+
+        <div class="garden-dashboard">
+            <!-- Left Side: Sliders -->
+            <div class="garden-inputs fade-in" style="animation-delay: 0.2s;">
+                <h3 style="margin-bottom: 2rem; color: var(--accent-color); font-weight: 300; font-size: 1.5rem;">Daily Reflection</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-weight: 300; line-height: 1.5;">Rate your contribution to each field today (0-10).</p>
+                
+                <div class="slider-group">
+                    <div class="slider-header"><label>Health</label> <span id="val-health">5</span></div>
+                    <input type="range" id="slider-health" min="0" max="10" value="5" class="zen-slider">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-header"><label>Skill</label> <span id="val-skill">5</span></div>
+                    <input type="range" id="slider-skill" min="0" max="10" value="5" class="zen-slider">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-header"><label>Connections</label> <span id="val-connections">5</span></div>
+                    <input type="range" id="slider-connections" min="0" max="10" value="5" class="zen-slider">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-header"><label>Discipline</label> <span id="val-discipline">5</span></div>
+                    <input type="range" id="slider-discipline" min="0" max="10" value="5" class="zen-slider">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-header"><label>Stability</label> <span id="val-stability">5</span></div>
+                    <input type="range" id="slider-stability" min="0" max="10" value="5" class="zen-slider">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-header"><label>Goals</label> <span id="val-goals">5</span></div>
+                    <input type="range" id="slider-goals" min="0" max="10" value="5" class="zen-slider">
+                </div>
+
+                <button id="btn-water-garden" class="profound-btn" style="margin-top: 2rem; width: 100%;">Water The Garden</button>
+            </div>
+
+            <!-- Right Side: Hexagon Charts -->
+            <div class="garden-charts fade-in" style="animation-delay: 0.4s;">
+                <div class="chart-container">
+                    <h3 class="chart-title">Today's Growth</h3>
+                    <canvas id="daily-hexagon" width="300" height="300"></canvas>
+                </div>
+                
+                <div class="chart-container" style="margin-top: 3rem;">
+                    <h3 class="chart-title">Lifetime Cultivation (Exponential)</h3>
+                    <canvas id="lifetime-hexagon" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
