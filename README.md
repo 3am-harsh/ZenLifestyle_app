@@ -17,28 +17,6 @@ ZenLifestyle is designed to be more than just a habit tracker. It is a digital d
 - **Vanilla CSS3** (Custom Variables, Flexbox/Grid, Animations, Glassmorphism)
 - **Vanilla JavaScript** (State Management via `localStorage`, DOM manipulation)
 
-## Deployment / Packaging
-Since this is a client-side only application, it can be deployed or packaged in minutes:
 
-### Web Hosting
-Deploy directly to GitHub Pages, Netlify, or Vercel by simply linking the repository.
 
-### Android Application
-1. Install [Capacitor](https://capacitorjs.com/):
-   ```bash
-   npm install @capacitor/cli @capacitor/core
-   npx cap init
-   npm install @capacitor/android
-   npx cap add android
-   ```
-2. Build your web app and open Android Studio:
-   ```bash
-   npx cap copy
-   npx cap open android
-   ```
-3. Generate your `.apk` or `.aab` directly from Android Studio.
 
-## Philosophy
-> *"The blade is forged in fire. The mind is forged in stillness."*
-
-There is nothing outside of yourself that can ever enable you to get better, stronger, richer, quicker, or smarter. Everything is within. Walk the path alone.
